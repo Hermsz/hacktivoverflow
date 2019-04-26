@@ -24,7 +24,7 @@ class QuestionController {
   static findById(req, res) {
 
     QuestionModel
-      .findById(req.params.id)
+      .findById(req.params.questionId)
       .populate('userId')
       .then(foundQuestion => {
         res.status(200).json(foundQuestion)
@@ -77,9 +77,10 @@ class QuestionController {
 
   // Update a Question
   static updateQuestion(req, res) {
+    console.log('masukkkkkkkkkk')
 
     QuestionModel
-      .findByIdAndUpdate(req.params.id, { ...req.body })
+      .findByIdAndUpdate(req.params.questionId, { ...req.body })
       .then(updatedQuestion => {
         res.status(200).json(updatedQuestion)
       })
@@ -91,7 +92,7 @@ class QuestionController {
   // Delete a Question
   static deleteQuestion(req, res) {
     QuestionModel
-      .findByIdAndDelete(req.params.id)
+      .findByIdAndDelete(req.params.questionId)
       .then(deletedQuestion => {
         res.status(200).json(deletedQuestion)
       })
@@ -99,6 +100,7 @@ class QuestionController {
         res.status(500).json(err)
       })
   }
+  
 
   // Upvote a Question
   static upvote(req, res) {

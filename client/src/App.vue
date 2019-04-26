@@ -39,7 +39,7 @@
   import {
     mapState
   } from 'vuex'
-  let baseUrl = `http://localhost:3001`
+
 
   export default {
     name: 'App',

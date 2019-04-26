@@ -34,7 +34,7 @@ class UserController {
   }
 
   // Local Login
-  static webLogin(req, res) {
+  static Login(req, res) {
     UserModel
     .findOne({
       email: req.body.email

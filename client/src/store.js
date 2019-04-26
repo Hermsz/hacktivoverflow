@@ -50,7 +50,7 @@ export default new Vuex.Store({
     signIn({ commit, dispatch }, payload) {
       console.log('Masuk sign in store ');
 
-      axios.post(`${baseUrl}/users/webLogin`, {
+      axios.post(`${baseUrl}/users/login`, {
           email: payload.email,
           password: payload.password,
         })
