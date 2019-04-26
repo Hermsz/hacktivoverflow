@@ -10,7 +10,7 @@ $ npm run dev or nodemon app.js (on terminal inside root server folder)
 $ nom run serve (on terminal inside root client folder)`
 ```
 
-Access server via `http://localhost:3000`<br>
+Access server via `http://localhost:3001`<br>
 Access client via `http://localhost:8080`
 
 ##  User Routes
